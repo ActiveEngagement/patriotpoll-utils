@@ -1,10 +1,10 @@
 module.exports = {
     presets: [
-        ['@vue/app', {
+        ['@babel/env', {
+            corejs: 3,
             useBuiltIns: "usage", // or "entry"
             targets: {
-                "ie": "10",
-                browsers: "> 1%, not dead",
+                browsers: "> .25%, not dead",
             }
         }]
     ]

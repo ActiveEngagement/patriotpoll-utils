@@ -1,5 +1,4 @@
 const webpack = require('webpack');
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = {
     configureWebpack: {
@@ -8,8 +7,7 @@ module.exports = {
             sideEffects: false
         },
         plugins: [
-            new webpack.IgnorePlugin(/^\.\/locale$/),
-            new BundleAnalyzerPlugin()
+            new webpack.IgnorePlugin(/^\.\/locale$/)
         ]
     },
     css: {

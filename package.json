@@ -8,9 +8,9 @@
     "lint": "vue-cli-service lint",
     "fix": "vue-cli-service lint --fix",
     "pre-release": "git add . -A; git commit -m 'pre-release commit'; git pull origin master;",
-    "release-patch": "npm version patch && npm run release;",
-    "release-minor": "npm version minor && npm run release;",
-    "release-major": "npm version major && npm run release;",
+    "release-patch": "npm run pre-release && npm version patch && npm run release;",
+    "release-minor": "npm run pre-release && npm version minor && npm run release;",
+    "release-major": "npm run pre-release && npm version major && npm run release;",
     "release": "git push --follow-tags origin master"
   },
   "dependencies": {
