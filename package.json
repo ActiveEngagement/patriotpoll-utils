@@ -1,0 +1,53 @@
+{
+  "name": "patriotpoll-utils",
+  "version": "0.1.0",
+  "main": "src/PatriotPollUtils.umd.js",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build --inline-vue --target lib --name PatriotPollUtils src/index.js",
+    "lint": "vue-cli-service lint",
+    "fix": "vue-cli-service lint --fix",
+    "pre-release": "git add . -A; git commit -m 'pre-release commit'; git pull origin master;",
+    "release-patch": "npm version patch && npm run release;",
+    "release-minor": "npm version minor && npm run release;",
+    "release-major": "npm version major && npm run release;",
+    "release": "git push --follow-tags origin master"
+  },
+  "dependencies": {
+    "axios": "^0.21.0",
+    "core-js": "^3.7.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^4.5.7",
+    "@vue/cli-service": "^4.5.7",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.11.0",
+    "eslint-plugin-vue": "^7.0.1",
+    "node-sass": "^5.0.0",
+    "postcss-prefix-selector": "^1.7.2",
+    "sass-loader": "^10.0.3",
+    "vue-template-compiler": "^2.6.12",
+    "webpack": "^4.0.0",
+    "webpack-bundle-analyzer": "^3.9.0",
+    "webpack-cli": "^4.0.0"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
